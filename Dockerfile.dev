@@ -1,0 +1,21 @@
+FROM node:14.17.0-alpine
+
+ENV WORKDIR_PATH /app
+
+WORKDIR $WORKDIR_PATH
+
+# coreutils is need to update shred package
+RUN apk update && apk add --no-cache \
+    bash \
+    coreutils \
+    gnupg \
+    mysql-client \
+    tzdata
+
+# path to the script for creating backups
+ENV BACKUP_SCRIPT_PATH $WORKDIR_PATH/scripts/backup.sh
+# path to the script for removing old backups
+ENV BACKUP_CLEAN_SCRIPT_PATH $WORKDIR_PATH/scripts/clean.sh
+
+CMD chmod +x start.sh scripts/* node-script/* && \
+    ./start.sh

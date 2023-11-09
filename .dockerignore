@@ -1,0 +1,8 @@
+node-script/node_modules
+node-script/.eslintignore
+node-script/.eslintrc
+.git/
+.gitignore
+.gitlab-ci.yml
+Dockerfile.dev
+README.md

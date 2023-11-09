@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "webbylab"
+    ],
+    "plugins": [
+        "align-assignments"
+    ],
+    "rules": {
+        "import/no-commonjs": 0,
+        "align-assignments/align-assignments": [ 2, { "requiresOnly": true } ]
+    }
+}

@@ -1,0 +1,4 @@
+node_modules/
+*.zip
+node-script/keys/*.gpg
+#node-script/keys/revocationcertificate.gpg
